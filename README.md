@@ -1,3 +1,3 @@
 # Vanilla-Javascript
 
-All things functional and OOPS in JS
+All things functional and OOP in JS
