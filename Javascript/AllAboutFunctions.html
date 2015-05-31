@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FUNCTIONS</title>
+</head>
+<body>
+<!--to run any of the programs mentioned below, just copy and paste in the Chrome console-->
+	<h1> All About Javascript functions </h1>
+	<h2>Remember: Javascript Functions are objects</h2>
+	<p>Unlike other languages, JS functionsare objects. This means they are like any other value.
+    <ul>
+    	<li>They can be stored in variables, ojects and arrays</li>
+    	<li>Passed as arguments to other functions, these are called as callbacks aka high order functions</li>
+    	<li>can be returned from other functions</li>
+    </ul>
+    </p>
+    <p>There are two ways of creating a function: function declaration and function expression. There are some key differences betweeen the two, I will write about this more when I talk about Hoisting
+
+       Below is a simple function declaration example: <br>
+         function add(num1, num2) { 
+              var x= num1 +num2;
+             return x;
+         }         
+         var result=add(2,3);  <!--Note: we are storing the function in a variable-->
+         console.log(result);
+    </p>
+    <p>
+    	Lets create a object <br>
+    	var myobjects = {
+			name:"This objects has many properties aka methods and their associated values",
+			num_of_properties: 3,
+            this_prop_isaFunc: function() {alert ("I belong to th object called myobjects");
+            }
+    	};
+    	<!--we invoke/execute the function that's stored as an object property by calling the property and adding ()-->
+    	myobjects.this_prop_isaFunc();
+    	<!--if you just want to see what is in myobjects.this_prop_isaFunc call it without ()...try it-->
+    </p>
+    <p>
+    	Two examples of a function expression below <br>
+    	var mult = function awesome(a,b) { return (a*b); };
+		var mult2 = function (a,b) { return (a*b); };
+
+		As you can see function expression differs from function declaration, here we are passing a function to a variable, which stores the entire function, this is makes a difference during call time---more about it when I write about hoisting. Also the two examples are different in the way we have defined the function. The second example is an anyomyomus function(notice no name after the keyword function). The word that comes after function is optional, you can skip it, depending on preference
+    </p>
+    <p>
+    	you can invoke both methods by doing the following:
+		console.log('Running mult(3,5)', mult(3,5));             
+		console.log('Running mult2(10,3)', mult2(10,3));        
+    </p>
+    <p>	what is the difference between these two objects?
+		console.dir(mult);
+		console.dir(mult2);
+		check the console and see where javascript stored the named of the function. The main difference is that if you want to see MORE detail of an object then console.log is showing you, try console.dir.
+	</p>
+	<h4>THe Return statement</h4>
+	<p>Dual function of the return statement
+     <ul>
+     	<li>Exit the current function: anything written after the current statemnt will not be executed</li>
+     	<li>It can also be used to return a value</li>
+     </ul>
+
+	</p>
+</body>
+</html>

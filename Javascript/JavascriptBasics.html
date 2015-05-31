@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Basics</title>
+	
+</head>
+<body>
+<script type="text/javascript">
+//prints all values of an array and displays the type of value
+		var x = [3,5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}];
+		for(var i=0; i <x.length; i++)
+		{
+			console.log(x[i]);
+			console.log(typeof(x[i]));
+		}
+		x.push(100);  // add 100 to the array x
+		console.log(x);
+		//x.push(new array[]);
+		//console.log(x);
+
+		//calculate numbers from 1-500
+		var result=0;
+		for(i=1; i <= 500; i++)
+		{
+			result = i+result;
+		}
+		console.log("The total sum of numbers between 1-500 is: " + result);
+
+
+		//computer numbers from 1 to million, uses timestamp difference before and after the for loop to find the time it took to do this computation
+		var sum=0;
+		var t = new Date().getTime();
+		console.log("Time IN MILLISECONDS BEFORE THE FOR FOR LOOP COMPUTATIONS IS: " + t);
+        for(i=1; i <= 1000000; i++)
+		{
+			sum = i+sum;
+		}
+		var s = new Date().getTime();
+		console.log("Time IN MILLISECONDS AFTER THE FOR FOR LOOP COMPUTATIONS IS: " + s);
+		var z = s-t;
+		console.log("Time it took to compute the for loop is: " + z + "seconds");
+		console.log("Total for numbers between one to million is: " + sum);
+</script>
+	
+</body>
+</html>

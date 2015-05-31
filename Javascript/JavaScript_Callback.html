@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of Javascript call back</title>
+</head>
+<script type="text/javascript">
+    var randomName = function() {
+   	var name = ['George', 'Mike', 'Joe', 'Ninja'];
+     return name[Math.floor(Math.random()*name.length)];
+   }
+	var say = function(x) {
+	  console.log('Say ', x);
+	}
+	var yell = function(x) {
+	  console.log('Yell ', x);
+	}
+	var eat = function(x) {
+	  console.log('Eat ', x);
+	}
+	
+	var roll = function(x) {
+	  console.log ('Roll ', x);
+	}
+	function random_function(a, x, y, z, f) {     //the parameters can be anything, as long as they are used within the function
+	  // a();
+	  x(a());
+	  y(a());
+	  z(a());
+	  f(a());
+	}
+	random_function(randomName, say, yell, eat, roll);    //When you call the function make sure to use the correct function name. IMP!
+	// Possible results include:
+	// Roll George
+	// Eat Ninja
+	// Say Mike
+	// Eat George
+    	
+</script>
+<body>
+	
+</body>
+</html>

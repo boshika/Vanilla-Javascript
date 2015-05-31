@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Funcamentals--Working with Objects</title>
+</head>
+<body>
+<script type="text/javascript">
+/*to execute the functions just type functionname() in console or create here in the program*/
+	var person = {};
+	person = {
+		name: 'Boshika',
+		distance_travelled : 0,
+		say_name: function(){
+			alert(this.name)
+		},
+		say_something: function(){
+			alert(this.name + " is cool");
+			},
+		walk: function(){
+			person.distance_travelled += 3;
+			console.log(person.distance_travelled);
+			alert(person.name + " is walking " + person.distance_travelled);
+		},			
+		run: function(){
+			
+			person.distance_travelled += 10;
+			alert(person.name + " is running " + person.distance_travelled);
+		},
+		crawl: function(){
+			person.distance_travelled += 1;
+			alert(person.name + " is crawling " + person.distance_travelled);			
+		},
+		do_something: function(){
+			var random = [this.walk, this.run, this.crawl];
+			return random[Math.floor(Math.random()*3)]();
+		},
+		fly: function(flying, grounded){
+			var z = Math.random();
+			if (z > 0.70)
+			{
+				return flying();
+			}
+			else (z < 0.70)
+			{
+				return grounded();
+			};
+		}
+	};
+
+	var flying = function() {
+		console.log("WOW! I AM FLYING!!!!!!!");
+	}
+
+	var grounded = function() {
+		console.log("I am on ground :-(");	
+	}
+
+	console.log(person.say_something());
+
+</script>
+	
+</body>
+</html>

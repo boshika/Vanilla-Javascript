@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Fun Circles
+	</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="1500" height="1500"></canvas>​
+	<script type="text/javascript">
+		function Circle(){
+			this.canvas = document.getElementById('my_canvas');
+			this.context = this.canvas.getContext('2d');
+
+			this.coordinate = function(){
+					return Math.floor((Math.random()*1400)+1);
+				}
+				
+				// method/function to get random radius of a circle
+				this.radius = function(){
+					return Math.floor((Math.random()*25)+1);
+				}
+				
+				// method/function to get random color of the circle
+				this.color = function(){
+					return "rgb(" + Math.floor((Math.random()*255)+0) + "," + Math.floor((Math.random()*255)+0) + "," + Math.floor((Math.random()*255)+0) + ")";
+				}
+
+				this.create_circle = function(){
+					this.context.beginPath();
+					this.context.arc(this.coordinate(), this.coordinate(), this.radius(), 0, 2 * Math.PI, false);
+					this.context.fillStyle = this.color();
+					this.context.fill();
+				}
+		}
+
+		var time_begin = new Date();
+			
+			for (var counter = 1; counter <= 500; counter++)
+			{
+				
+				var circle = new Circle();
+				
+				circle.create_circle();
+			}
+
+			var time_end = new Date();
+			
+		
+			var total_time = time_end - time_begin;
+			
+			
+			console.log("Total time it took to draw all the circles: " + total_time/1000 + " seconds");
+
+	</script>
+</body>
+</html>

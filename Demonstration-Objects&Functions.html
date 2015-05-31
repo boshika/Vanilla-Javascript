@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    </title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var person ={
+		name: "Boshika",
+		distance_travelled: 0,
+		say_name: function() {
+			alert(person.name);
+		},
+		say_something: function(arg) {
+			alert(person.name + " says I am OK");
+		},
+		walk: function() {
+			person.distance_travelled+=3;
+			alert(person.name + " is walking " + person.distance_travelled);
+		},
+		run: function() {
+			person.distance_travelled+=10;
+			alert(person.name + " is running " + person.distance_travelled);
+		},
+		crawl: function() {
+			person.distance_travelled+=1;
+			alert(person.name + " is crawling" + "<br>" + "Distance travelled: " + person.distance_travelled);
+		},
+		doSomething: function() {
+			var random = [person.walk, person.crawl, person.run];
+			return random[Math.floor(Math.random()*3)]();
+		},
+		fly: function(a,b) {
+			var chance = Math.random();
+			if (chance > 0.70)
+				return a();
+			else
+				return b();
+		},
+		
+	};
+
+	function flying() {
+	console.log("WOW! I AM FLYING!!!!!!!");
+	};
+
+	function notflying() {
+		console.log("I am on ground :-(");	
+	};
+
+console.log(person.name);
+//person.say_name();
+//person.run();
+//person.doSomething();
+person.fly(flying, notflying);
+
+</script>
+    
+</body>
+</html>
