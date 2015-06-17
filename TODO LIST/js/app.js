@@ -85,7 +85,7 @@ var taskCompleted = function() {
 
 }
 
-//Mark a task as inomplete
+//Mark a task as incomplete
 var taskIncomplete = function() {
 	console.log("task incomplete")
 	var listItem = this.parentNode;

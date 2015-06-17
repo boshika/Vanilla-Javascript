@@ -1,6 +1,7 @@
 /* Basic Style */
 body {
   background: #fff;
+  background-color: black;
   color: #333;
   font-family: Lato, sans-serif;
 }
@@ -8,6 +9,9 @@ body {
   display: block;
   width: 400px;
   margin: 100px auto 0;
+}
+h1 {
+  color: red;
 }
 ul {
   margin: 0;
@@ -17,8 +21,9 @@ li * {
   float: left;
 }
 li, h3 {
-  clear:both;
+  /*clear:both;*/
   list-style:none;
+  color: red;
 }
 input, button {
   outline: none;
@@ -26,8 +31,9 @@ input, button {
 button {
   background: none;
   border: 0px;
-  color: #888;
+  color: #880;
   font-size: 15px;
+  font-weight: bold;
   width: 60px;
   margin: 10px 0 0;
   font-family: Lato, sans-serif;
@@ -39,7 +45,7 @@ button:hover {
 /* Heading */
 h3,
 label[for='new-task'] {
-  color: #333;
+  color: red;
   font-weight: 700;
   font-size: 15px;
   border-bottom: 2px solid #333;
