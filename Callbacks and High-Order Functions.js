@@ -177,7 +177,50 @@ var isEven = function(value) {if(value % 2 == 0) {return value}}
 console.log(filter([10,46,85,32,0,87,52], isEven))
 
 
+//each with reduce
+
+function each(collection, callback){
+    if(!Array.isArray(collection))
+       {
+          for(var key in collection)
+          {
+            callback(collection[key]);
+            }
+       }
+       
+       else if (Array.isArray(collection))
+       {
+          for(var i=0; i<collection.length; i++)
+         {
+      
+           callback(collection[i]);
+    
+          }
+   }
+}
+
+function reduce(collection, callback) {
+     var result =0;
+     //for(var i=0; i<collection.length; i++)
+      // {
+         each(collection, function(value) {result = callback(value,result)})
+          
+      // }
+  return result;
+}
+
+console.log(reduce([2,3,4,5], function(value, addTo){return value + addTo}));  //output 14
 
 
 
+//4._.pluck takes an object and a property name and returns the //property name's value. Write your own version called myPluck.
 
+function myPluck(obj, callback, keyThis) {
+ var nameVal=[];
+     for(var key in obj) {
+         if(callback(obj[key], keyThis)) {nameVal.push(obj[key])}
+   }
+ return nameVal
+}
+
+console.log(myPluck({key1:"Boshika", key2:"San Francisco", key3:"Mission Street"}, function(value, keyThis) {if(value == keyThis) {return value;}}, "San Francisco"))
