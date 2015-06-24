@@ -111,7 +111,7 @@ console.log(map({a:"Boshika", b:45}, function(number) {
 return number}
 ))
 
-//filter using th each function
+//filter using the each function
 
 function each(collection, callback){
     if(!Array.isArray(collection))
@@ -224,3 +224,19 @@ function myPluck(obj, callback, keyThis) {
 }
 
 console.log(myPluck({key1:"Boshika", key2:"San Francisco", key3:"Mission Street"}, function(value, keyThis) {if(value == keyThis) {return value;}}, "San Francisco"))
+
+//concat a multi array using reduce
+
+function reduce(collection, callback) {
+   var result=[];
+    for(var i=0; i<collection.length; i++) {
+        for(var j=0; j<collection[i].length; j++)
+      {
+          result.push(callback(collection[i][j]))
+      }
+} return result }
+
+  console.log(reduce([[2,4],[6,8],[0]], function(value) {
+       return value;
+
+})) //output [2, 4, 6, 8, 0]
