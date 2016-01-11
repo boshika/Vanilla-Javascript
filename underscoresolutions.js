@@ -51,6 +51,23 @@ var checkValue = function(arr, val) {
   });
 };
 
+//Re-wrote checkValue, to make the ouput prettier...
+ //Write a function called checkValue that searches an array for a value. It takes an array and a value and returns true if the value exists in the array, otherwise 
+  //it returns false.
+function checkValue (collection, value) {
+  var val = false;
+  each(collection, function(n){
+    if (n === value){
+       val = true;
+    }
+    else {
+       return val;
+}
+});
+return val;
+}
+ checkValue([1,2,3,4,-1], 3);   //true
+ 
 //4. Write a loop that pushes all the values in an object to an array
 
 input= {two: 2, four: 4, three: 3, twelve: 12};
