@@ -1,5 +1,7 @@
 
-# Vanilla-Javascript
+## Vanilla-Javascript
+----------------------
+**All things functional and OOP in JS**
 
-All things functional and OOP in JS
+
 
