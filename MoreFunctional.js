@@ -19,3 +19,16 @@ Sort method w/o a function does a string comparison, to avoid this
 a comparator function needs to be passed into sort
 **/
 
+var comparator = function(x,y) {
+  if(x < y) {
+    return -1;
+  } else if (x > y) {
+    return 1;
+  }
+};
+
+var myArray = [2,-1,3,5,2,-125];
+myArray.sort(comparator);
+//[-125, -1, 2, 2, 3, 5]
+
+///////////////////////////////////////////////////////
