@@ -100,3 +100,30 @@ console.log(itDiv);   //[ 'Mike', 'Clayton', 'Terrill', 'Jennifer' ]
 console.log(dmpDept); // Raymond,Cynthia,Danny
 console.log(cisDept); // Mike,Clayton,Terrill,Jennifer
 
+//Mutator functions: shift(), unshift(), push(), pop()
+//There are two mutator functions for adding elements to an array: push() and un
+//shift(). The push() function adds an element to the end of an array:
+
+var nums = [1,2,3,4,5];
+console.log(nums); // 1,2,3,4,5
+nums.push(6);
+console.log(nums); // 1,2,3,4,5,6
+
+//Using push() is more intuitive than using the length property to extend an array:
+
+var nums = [1,2,3,4,5];
+console.log(nums); // 1,2,3,4,5
+nums[nums.length] = 6;
+console.log(nums); // 1,2,3,4,5,6
+
+//unshift()
+var nums = [2,3,4,5];
+print(nums); // 2,3,4,5
+var newnum = 1;
+nums.unshift(newnum);
+print(nums); // 1,2,3,4,5
+nums = [3,4,5];
+nums.unshift(newnum,1,2);
+print(nums); // 1,2,3,4,5
+
+//Also pop(), and shift to remove from last index, and first index respectively
