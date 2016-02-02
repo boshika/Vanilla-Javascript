@@ -127,3 +127,5 @@ nums.unshift(newnum,1,2);
 print(nums); // 1,2,3,4,5
 
 //Also pop(), and shift to remove from last index, and first index respectively
+//Adding and Removing Elements from the Middle of an Array
+
