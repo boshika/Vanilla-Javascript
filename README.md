@@ -1,8 +1,7 @@
 
 ## Vanilla-Javascript
-====================================================================
 **All things JavaScript**
-
+====================================================================
 | [TODO APP](TODO LIST) | 
 ## A fully-functional application, written in plain JavaScript, that lets the uesr create and maintain a todo list. 
 
