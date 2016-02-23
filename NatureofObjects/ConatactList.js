@@ -1,4 +1,4 @@
-var friends ={
+ar friends ={
     bill:{
        firstName: "Bill",
        lastName: "McGee",
