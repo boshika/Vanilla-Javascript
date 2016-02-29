@@ -14,6 +14,8 @@
 | [Data Structures and Algorithms](DataStructuresAndAlgorithms) |
 ## My attempt at covering ADTs, DSs, and Algos
 
+| [Functions](Functions) |
+## My attempt at covering ADTs, DSs, and Algos
 
 
 
