@@ -145,5 +145,24 @@ nums.splice(3,4);
 print(nums); // 1,2,3,4,5
 
 //Putting Array elements array in order
+//sort works well with strings
+var names = ["David","Mike","Cynthia","Clayton","Bryan","Raymond"];
+nums.sort();
+print(nums); // Bryan,Clayton,Cynthia,David,Mike,Raymond
 
+/**
+The sort() function sorts data lexicographically, assuming the data elements are strings,
+We can make the sort() function work correctly for numbers by passing in an ordering function as the
+first argument to the function, which sort() will then use to sort the array elements.
+This is the function that sort() will use when comparing pairs of array elements to
+determine their correct order.
+**/
 
+function compare(num1, num2) {
+
+ return num1 - num2;
+
+}
+var nums = [3,1,2,100,4,200];
+nums.sort(compare);
+print(nums); // 1,2,3,4,100,200
