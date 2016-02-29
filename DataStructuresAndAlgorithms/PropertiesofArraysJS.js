@@ -129,5 +129,21 @@ print(nums); // 1,2,3,4,5
 //Also pop(), and shift to remove from last index, and first index respectively
 //Adding and Removing Elements from the Middle of an Array
 
+var nums = [1,2,3,7,8,9];
+var newElements = [4,5,6];
+nums.splice(3,0,newElements);
+print(nums); // 1,2,3,4,5,6,7,8,9
+
+var nums = [1,2,3,7,8,9];
+nums.splice(3,0,4,5,6);
+print(nums);
+
+//Here is an example of using splice() to remove elements from an array:
+
+var nums = [1,2,3,100,200,300,400,4,5];
+nums.splice(3,4);
+print(nums); // 1,2,3,4,5
+
+//Putting Array elements array in order
 
 
