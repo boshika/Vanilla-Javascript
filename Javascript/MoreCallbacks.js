@@ -43,3 +43,36 @@ function() {
 	return videoAndTitlePairs;
 }
 		
+
+
+//maps alias collect
+
+var data = {
+    people: [
+        {name: "Boshika", state: "CA", price:100},
+        {name: "Sunil", state: "CA", price:200},
+        {name: "Jai", state: "FL", price:1},
+        {name: "Siya", state: "CA", price:100},
+    ]
+  },
+    
+    OrderItem = function(person) {
+        getSummary = function() {
+            return person.name + "spent" + person.price + "in" + person.state;
+        }
+        
+        return {
+            getSummary: getSummary
+        }
+    },
+    
+    m = _.collect(data.people,
+                 function(value, key, list) {
+//         console.log(value);
+        return OrderItem(value);
+    });
+
+//console.log(m);
+_.each(m, function(value){
+    console.log(value.getSummary());
+})
