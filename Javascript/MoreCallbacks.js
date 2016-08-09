@@ -76,3 +76,20 @@ var data = {
 _.each(m, function(value){
     console.log(value.getSummary());
 })
+
+//Demonstrates the concept of memoization/caching using reduce
+var data = {
+    people: [
+        {name: "Boshika", state: "CA", price:100},
+        {name: "Sunil", state: "CA", price:200},
+        {name: "Jai", state: "FL", price:1},
+        {name: "Siya", state: "CA", price:100},
+    ]
+  }
+
+var total = _.reduce(data.people, function(memo, value) {
+   return memo + value.price;
+}, 0);
+
+console.log(total);
+    
