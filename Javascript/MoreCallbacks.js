@@ -118,7 +118,20 @@ var ProductIDList = _.reduceRight(products,
 
 console.log(ProductIDList);
 
-//_.find
+//reversing a string using reduceRight
+var reverse = function(stringIs) {
+	return _.reduceRight(stringis, function(memo, value) {
+		if(memo !== "") {
+        memo += '';
+    }
+    
+    return memo + value;
+	}, '');
+};
+
+console.log(reverse("abc"));
+
+//_.find finds the first value that matches the truth test, different then filter 
 
 var someNumArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 

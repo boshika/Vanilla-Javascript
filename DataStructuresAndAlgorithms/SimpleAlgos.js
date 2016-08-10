@@ -267,3 +267,22 @@ map( myArray, func2);
 // [3,4,5,6,7]
 
 
+// Write a method that takes in a string. Return the longest word in
+// the string. You may assume that the string contains only letters and
+// spaces.
+//
+// You may use the String `split` method to aid you in your quest.
+    
+function findLongestWord(str) {
+  var strSplit = str.split(' ');
+  var longestWord = 0;
+  var wordIs;
+  for(var i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longestWord){
+	longestWord = strSplit[i].length;
+      wordIs = strSplit[i];
+     }
+  }
+  return wordIs;
+}
+//console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
