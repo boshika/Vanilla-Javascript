@@ -93,3 +93,27 @@ var total = _.reduce(data.people, function(memo, value) {
 
 console.log(total);
     
+
+//Reduce Right
+
+var products = [
+    {id: 1001},
+    {id: 1002},
+    {id: 1003},
+    {id: 2000},
+    {id: 2001},
+    {id: 3001},
+    {id: 3002}
+];
+
+var ProductIDList = _.reduceRight(products, 
+    function(memo, val) {
+        
+    if(memo !== "") {
+        memo += ','
+    }
+    
+    return memo + val.id
+}, '');
+
+console.log(ProductIDList);
