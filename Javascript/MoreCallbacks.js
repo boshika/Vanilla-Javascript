@@ -117,3 +117,23 @@ var ProductIDList = _.reduceRight(products,
 }, '');
 
 console.log(ProductIDList);
+
+//_.find
+
+var someNumArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+var findEven = function(value) {
+    return value % 2 === 0;
+}
+
+var findOdd = function(value) {
+    return value % 2 !== 0
+}
+
+var findGreaterThanEight = function(value) {
+    return value > 8
+}
+
+console.log(_.find(someNumArray, findEven));
+console.log(_.find(someNumArray, findOdd));
+console.log(_.find(someNumArray, findGreaterThanEight));
