@@ -10,7 +10,7 @@ nums[0] = 400;
 console.log(nums);
 console.log(samenums[0]);
 
-//deep copy: create  heler function for this
+//deep copy: create  helper function for this
 
 var copy = function(arr1, arr2) {
   for(var i=0; i<arr1.length; i++) {
@@ -166,3 +166,7 @@ function compare(num1, num2) {
 var nums = [3,1,2,100,4,200];
 nums.sort(compare);
 print(nums); // 1,2,3,4,100,200
+
+
+/**
+**/
